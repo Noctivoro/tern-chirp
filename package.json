@@ -1,0 +1,15 @@
+{
+  "name": "tern-chirp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chirp: a Jev-driven robot voice that tells you when a Tern agent wants you.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "luau-analyze lib/*.luau test/*.luau && luau test/run.luau",
+    "audition": "node bin/audition.mjs --play"
+  }
+}

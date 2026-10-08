@@ -1,0 +1,7 @@
+schema = 1
+id = "chirp"
+name = "Chirp"
+version = "0.1.0"
+description = "Gives Tern a beeping robot voice: when an agent finishes or needs you, Jev reads the turn and Chirp sings it."
+icon = "bell"
+window = "window.luau"
