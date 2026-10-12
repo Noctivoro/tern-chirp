@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fix Linux playback volume by converting linear amplitude to PulseAudio's cubic volume scale. The default 20% amplitude now plays at about -14 dB instead of -42 dB.
+
 ## 0.1.0
 
 First release.
