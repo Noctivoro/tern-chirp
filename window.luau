@@ -66,7 +66,8 @@ local function player(path: string): { string }?
 	if platform == "macos" then
 		return { "/usr/bin/afplay", "-v", string.format("%.2f", volume()), path }
 	elseif platform == "linux" then
-		return { "paplay", "--volume=" .. math.floor(volume() * 65536), path }
+		-- PulseAudio cubes its volume value to obtain linear amplitude.
+		return { "paplay", "--volume=" .. math.floor(volume() ^ (1 / 3) * 65536), path }
 	end
 end
 
